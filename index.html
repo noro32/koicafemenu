@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Koi Cafe</title>
+     <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  
+  <style>
+        /* css Styles */
+       
+        body { /* all styles */
+            font-family: Nunito, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header { /* header all */
+            text-align: center;
+            padding: 20px;
+            background-color: #617da5;
+            border-bottom: 1px solid #000000;
+           
+        }
+
+        #header-img { /* header image logo*/
+            display: block;
+            margin: 0 auto 10px;
+            width: 80px;
+        }
+
+        h1 { /* header title koi cafe*/
+            font-size: 24px;
+            margin: 0;
+            color: #FAFAFA ;
+            font-weight: 900;
+        }
+
+        nav a { /* nav links*/
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2e2a2f;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        nav a:hover { /* when hovering over links menu order*/
+            text-decoration: underline;
+            color:#e5b692 ;
+        }
+
+        /* Menu Section */
+        main { /* main context all*/
+            padding: 20px;
+            text-align: center;
+        }
+
+        #menu h2 { /* Menu title */
+            font-size: 20px;
+            color: #d0957e ;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .menu-grid { /* grid for all my menu images and price */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu-item { /* menu items*/
+            text-align: center;
+            width: 45%;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+          
+            
+            
+        }
+
+        .menu-item img { /* menu item images*/
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+            border: 2px solid #98929f;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 { /* menu item text*/
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .menu-item p { /* p */
+            font-size: 12px;
+            color: #555;
+            border-radius: 5px;     
+            padding: 10px;         
+            margin: 10px;   
+       }
+
+      /* for all menu description styles border */
+      
+      .p-2{
+        border: 1px solid #98929f;
+       }
+      .p-3{
+        border: 1px solid #98929f;
+
+       }
+      .p-4 {
+
+        border: 1px solid #98929f;
+
+       }
+      .p-5{
+        border: 1px solid #98929f;
+
+       }
+        
+      /* Order Form */
+        #order-form h2 {
+            font-size: 20px;
+            color: #d0957e ;
+            margin-bottom: 20px;
+        }
+
+        .order-grid {  /* Order Form grid for better looks */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .order-item { /* Order items */
+            width: 45%;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 20px auto;
+            height: 50px;
+        }
+
+        label { /* label styles */
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input[type="number"], /* input number style  */
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #B0BEC5;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 30%;
+            height: 17px;
+            text-align: center;  
+        }
+
+       
+
+        input[type="submit"] {
+            display: block;
+            background-color: #8daad4  ;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 20px auto;
+            font-weight: 700;
+         
+        }
+
+        input[type="submit"]:hover {
+            background-color: grey;    
+           
+        }
+        
+
+        input[type="checkbox"]{
+          background-color: solid grey;
+          border-color: grey;
+        }
+        
+        textarea { /* text area styles */
+        width: 80%; 
+        height: 50px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 14px;
+        border: 2px solid #B0BEC5;
+    
+       }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #617da5;
+            
+            margin-top: 40px;
+            font-size: 12px;
+            
+        }
+
+       
+
+    </style>
+   
+</head>
+
+<body>
+      <!-- Header includes logo, nav, and title -->
+    <header> 
+        <img id="header-img" src="koifish.gif" alt="koi Cafe Logo">
+        <h1>𓏸𓈒𓂃 Koi Cafe .ᐟ𓂃 𓈒𓏸 </h1>
+       <br>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#order-form">Place Order</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Menu Section includes menu images description and price  and grid -->
+        <section id="menu">
+            <h2>MENU</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="coffee.png" alt="Dark Coffee">
+                    <h3>dark coffee</h3>
+                    <p class="p-2">Rich, bold, and smooth in a cup.</p>
+                    <p><i><u>Price: $9.99</i></p></u></p>
+                </div>
+               
+                <div class="menu-item">
+                    <img src="sandwhich.jpg" alt="sandwhich">
+                    <h3 >sandwhich</h3>
+                    <p class="p-3">Enjoy crispy bacon, fluffy eggs, juicy tomatoes, and fresh lettuce, all tucked into warm, toasted bread—pure comfort in every bite!</p>
+                    <p><u><i>Price: $5.99</i></u></p>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="pancakes.jpg" alt="pancakes">
+                    <h3 >pancakes</h3>
+                    <p class="p-4">Fluffy pancakes drizzled with rich chocolate, turning every bite into a sweet, melt-in-your-mouth moment!</p>
+                    <p><u><i>Price: $11.99</i></u></p>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="box of sweets .jpg" alt="box of sweets">
+                    <h3>box of sweets</h3>
+                    <p class="p-5">A sweet box of joy with buttery croissants, fluffy cupcakes, warm cinnamon rolls, and mini cakes—perfect for any treat lover!</p>
+                    <p><i><u>Price: $12.99</i></u></p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Order Form Section  includes input number for how much food quanitity user wants-->
+        <section id="order-form">
+            <h2>PLACE YOUR ORDER</h2>
+            <form action="#" method="post">
+               
+                <div class="order-grid">
+                   
+                    <div class="order-item">
+                        <label for="dish-1">dark coffee</label>
+                        <input type="number" id="dish-1" name="dish-1" min="0" placeholder="Enter quantity">
+                    </div>
+                   
+                    <div class="order-item">
+                        <label for="dish-2">sandwich</label>
+                        <input type="number" id="dish-2" name="dish-2" min="0" placeholder="Enter quantity">
+                    </div>
+                    
+                    <div class="order-item">
+                        <label for="dish-3">pancakes</label>
+                        <input type="number" id="dish-3" name="dish-3" min="0" placeholder="Enter quantity">
+                    </div>
+                   
+                    <div class="order-item">
+                        <label for="dish-4">box of sweets</label>
+                        <input type="number" id="dish-4" name="dish-4" min="0" placeholder="Enter quantity">
+                    </div>
+
+                </div>
+
+                <label>Extras what would you like: </label> 
+                
+                 <!-- text area extras-->
+
+                <input type ="checkbox"> syrup  <input type ="checkbox"> honey <input type ="checkbox"> sugar
+                <br>
+
+                
+            
+                <br>
+                <label for="special-request">Special Request:</label>
+                <textarea id="request" rows="7" cols="40"  placeholder="">Enter your request here</textarea>
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+    </main>
+                 <!-- footer-->
+
+    <footer>
+        Made by noor for codédex ᢉ𐭩
+    </footer>
+</body>
+
+</html>
